@@ -23,7 +23,7 @@ Lasso Regression 에서 뒤에 붙은 Regression 은 '회귀'를 뜻한다
 
 회귀분석이란 무엇일까?
 
-![회귀분석이란](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/2.png?raw=true)
+![회귀분석이란](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/1.png?raw=true)
 
 회귀분석이란 어떤 변수(Y)가 다른변수(X)에 의해 설명된다고 보고, 그 변수간의 관계(f)를 조사하는 해석방법이다.
 
@@ -45,7 +45,7 @@ Lasso Regression 에서 뒤에 붙은 Regression 은 '회귀'를 뜻한다
 
 단순 선형 회귀란 단 하나의 특성을 가지고 타깃을 예측하는 것이다. 변수 하나를 가지고 하나의 변수를 예측한다.
 
-![단순 선형 회귀](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/1.png?raw=true)
+![단순 선형 회귀](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/2.png?raw=true)
 
 위의 그래프를 x축을 '매장 크기', y축을 '판매량'으로 두고 친구 상점 주위 13개의 매장을 조사하여 찍은 데이터라고 하자. x값이 커지면 y값도 커지는 관계를 보이고 있다. 이러한 일정한 패턴을 가장 잘 설명해주는 선형 함수를 찾아낸 것이 빨간 선이다. 이렇게 선형 함수(빨간 선)을 찾아낸다면, 친구 매장의 크기를 가지고 판매량을 예측할 수 있을 것이다. 
 
@@ -95,15 +95,15 @@ $\underset{0 \leq x \leq 2 \pi}{\operatorname{arg min}} (cos(x)) = {0, 2\pi}$
 
 다중  선형 회귀에서 이용하는 변수가 2가지 일때와 6가지일때의 차이를 예시 그래프를 통해 보자.
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/3.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/3.png?raw=true)
 
 이 경우는 변수가 2가지일때이고,
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/4.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/4.png?raw=true)
 
 이 경우는 변수가 6가지일 때이다. 더 변수를 많이 쓸수록 더 데이터와 그럴듯하게 맞아 떨어지는 것을 볼 수 있다. 그렇지만 더 잘 맞아떨어진다고 해서 항상 변수 갯수를 많이! 회귀 함수를 고차원 방정식으로 사용해야 하는 것은 아니다. 위에서 그려진 6차 방정식은 train set(친구 동네의 다른 상점들)에 잘 맞는것일뿐, test set(친구 상점)에 에서는 잘 맞지 않을 수 있기 때문이다. 즉 일반화 능력이 떨어진다는 것인데 이러한 문제를 과적합(over-fitting)이라고 한다.
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/5.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/5.png?raw=true)
 
 underfitting은 함수가 train set과 test set 모두에 맞지 않을 때이고, overfitting 은 다른 말로 함수가 "high variance"와 "low bias"를 가지고 있다고도 할 수 있다. 
 
@@ -111,13 +111,13 @@ underfitting은 함수가 train set과 test set 모두에 맞지 않을 때이�
 
 ### Variance? Bias?
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/6.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/6.png?raw=true)
 
 위의 양궁 과녁 예시 그림이 Variance와 Bias가 무엇인지 잘 설명해주고 있다. low bias, low variance를 가지고 있는 가장 좋은 경우가 왼쪽 위에 있는데, 여기서 variance가 증가하게되면 점들이 분산된 것을 볼 수 있다. 그리고 bias가 커지면 실제값(빨간색 원)과 추정값의 오차가 커지게 된다.  
 
 선형 회귀 모델에서는 실제값과 추정값의 오차를 줄이는 것에만 집중했기 때문에 bias는 작아졌지만, variance는 커질 수 있는 것이다. 
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/5.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/5.png?raw=true)
 
 아까 보았던 이 그림에서 
 
@@ -129,7 +129,7 @@ Overfitting : high variance, low bias 인 것이다.
 
 그렇다면 더 좋은 모델을 만들기 위해서는 bias와 variance가 어떻게 균형을 이루어야 할까?
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/7.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/7.png?raw=true)
 
 위의 그림을 보면, 우리가 모델을 만드는데 너무 적은 변수를 사용하게 되면 bias가 높게 된다 (underfitting). 그리고 너무 많은 변수를 사용하게 되면 모델의 복잡도는 올라가고 variance가 높아지게 된다 (overfitting). 따라서 우리는 저 점선이 표시하고 있는 최적 포인트에 가깝도록 모델을 만들어야 할 것이다.
 
@@ -139,7 +139,7 @@ underfitting을 해결하기 위해 변수를 추가할 수 있고, over fitting
 
 ### 정규화
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/8.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/8.png?raw=true)
 
 위의 그림은 정규화(Regularization)을 통해 더 좋은 결과를 가져오는 경우를 보여주는 그림이다. 
 
@@ -185,7 +185,7 @@ $\alpha$를 0.1로 설정했을 때 : 33개의 변수가 사용되었고 가장 
 
 실습에 사용할 데이터는 다양한 아울렛의 판매 정보를 담고 있는 
 
-[The Big Mart Sales](https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/) 데이터 셋이다.
+[The Big Mart Sales](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/9.png?raw=true) 데이터 셋이다.
 
 실습을 위하여 기본 라이브러리들을 import 하고,
 
@@ -249,7 +249,7 @@ coef = Series(lassoReg.coef_, predictors).sort_values()
 coef.plot(kind = 'bar');
 ```
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/output_21_0.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/9.png?raw=true)
 
 그래프를 보면 3개의 변수가 사용되지 않았고 17개의 변수가 사용된 것을 알 수 있다.
 
@@ -262,7 +262,7 @@ coef = Series(lassoReg.coef_, predictors).sort_values()
 coef.plot(kind = 'bar');
 ```
 
-![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/assets/images/2018-02-12/output_22_0.png?raw=true)
+![ㅇ](https://github.com/zimkjh/zimkjh.github.io/blob/master/images/post_images/2018-02-12-Lasso-Regression/10.png?raw=true)
 
 $\alpha$값을 높이니 패널티의 영향력이 커져서 가중치를 최소화 하다보니 변수가 2개(거의 1개인듯)밖에 남지 않게된 것을 볼 수 있다.
 
