@@ -6,13 +6,11 @@ featured: true
 comments: true
 title: 공부하며 기록한 Lasso Regression
 description: '디자인팀 과제로 '
-tags: JoHyun ML
+tags: JoHyun ML Python
 html header: >-
   <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 categories:
-  - personal
-  - python
   - ML
 ---
 # Lasso Regression
