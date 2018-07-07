@@ -1,24 +1,23 @@
 ---
 layout: post
 published: true
-categories:
-  - personal
 mathjax: true
 featured: true
 comments: true
 title: 공부하며 기록한 Lasso Regression
 description: '디자인팀 과제로 '
 tags: JoHyun ML
-headline: ''
-modified: ''
-imagefeature: ''
 html header: >-
   <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+categories:
+  - python
+  - ML
+headline: ''
+modified: ''
+imagefeature: ''
 ---
 # Lasso Regression
-
-
 
 ### 회귀분석이란?
 
@@ -192,12 +191,12 @@ $\alpha$를 0.1로 설정했을 때 : 33개의 변수가 사용되었고 가장 
 
 실습을 위하여 기본 라이브러리들을 import 하고,
 
-<pre><code>
+```python
 # import numpy as np
 import pandas as pd
 from pandas import Series, DataFrame
 from sklearn.model_selection import train_test_split
-</code></pre>
+```
 
 파일을 불러와준 후 간단히 결측치 처리와 범주형 변수 더미화를 해주었다.
 
