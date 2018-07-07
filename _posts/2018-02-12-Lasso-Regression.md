@@ -1,3 +1,18 @@
+---
+layout: post
+published: true
+categories:
+  - personal
+mathjax: false
+featured: false
+comments: false
+title: An Awesome Headline!
+description: ''
+headline: ''
+modified: ''
+tags: ''
+imagefeature: ''
+---
 # Lasso Regression
 
 
@@ -347,4 +362,3 @@ $\alpha$ 값이 대략 0.5일때 가장 스코어가 높았고.. 그 스코어�
 [arg min and arg max]: http://egloos.zum.com/nnovember/v/3928431
 [ridge와 lasso regression의 쉬운 풀이]: https://brunch.co.kr/@itschloe1/11
 [Regularizaion]: http://blog.naver.com/PostView.nhn?blogId=laonple&amp;amp;logNo=220527647084&amp;amp;parentCategoryNo=&amp;amp;categoryNo=22&amp;amp;viewDate=&amp;amp;isShowPopularPosts=true&amp;amp;from=search
-
