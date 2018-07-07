@@ -354,7 +354,7 @@ $\alpha$ 값이 대략 0.5일때 가장 스코어가 높았고.. 그 스코어�
 
   * Elastic Net Regression : 또 다른 유형의 regression이 존재한다. Ridge와 Lasso의 하이브리드 형태.
 
-    ​
+    
 
 #### 참고자료
 
