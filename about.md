@@ -3,7 +3,7 @@ layout: page
 permalink: /about/index.html
 title: JoHyun Kim
 tags: [JoHyun]
-imagefeature: ham_photo.png
+imagefeature: ham.png
 chart: true
 ---
 <figure>
