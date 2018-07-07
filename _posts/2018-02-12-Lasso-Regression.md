@@ -9,6 +9,12 @@ comments: true
 title: 공부하며 기록한 Lasso Regression
 description: '디자인팀 과제로 '
 tags: JoHyun ML
+headline: ''
+modified: ''
+imagefeature: ''
+html header: >-
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ---
 # Lasso Regression
 
@@ -48,9 +54,9 @@ Lasso Regression 에서 뒤에 붙은 Regression 은 '회귀'를 뜻한다
 
 단순 선형 회귀를 위한 일반화된 함수는 다음과 같다
 
-$\hat{y}= \beta_0 + \beta_1x$
+$$\hat{y}= \beta_0 + \beta_1x$$
 
-고등학교 수학에서 봤던 일차함수의 모양이지만, 여기서는 $\beta_1$을 가중치(weight), $\beta_0$를 편향(offset) 이라고 부른다. 그리고 그냥 $y$ 가 아닌 $\hat{y}$인 이유는  $\hat{y}$가 실제 값이 아닌 추정값임을 나타내기 때문이다.
+고등학교 수학에서 봤던 일차함수의 모양이지만, 여기서는 \\(beta\\)\_\\(1\\)을 가중치(weight), $\beta_0$를 편향(offset) 이라고 부른다. 그리고 그냥 $y$ 가 아닌 $\hat{y}$인 이유는  $\hat{y}$가 실제 값이 아닌 추정값임을 나타내기 때문이다.
 
 주어진 데이터에 완벽하게 딱 들어맞는 선형 함수를 찾아내는 것은 보통 불가능하다. 그리고 단 하나의 변수만 가지고 충분한 예측능력을 지닌 선형 함수를 만드는 것은 상당히 어렵다. 어떤 상점의 판매량에는 분명 '매장의 크기'뿐만이 아니라 '물건 보유량' ,'세일하는 상품 수' 등 수많은 변수들이 영향을 끼칠 것이기 때문이다. 
 
@@ -62,7 +68,7 @@ $\hat{y}= \beta_0 + \beta_1x$
 
 다중 선형 회귀를 위한 일반화된 함수는 다음과 같다
 
-$\hat{y} = \beta_0 + \beta_1x_1 + \beta_2x_2 + ... + \beta_nx_n$
+$$\hat{y} = \beta_0 + \beta_1x_1 + \beta_2x_2 + ... + \beta_nx_n$$
 
 위의 단순 선형 회귀와 비교했을때, 타깃 변수를 설명하는 변수가 두개 이상으로 증가한 것을 볼 수 있다. 타깃 변수를 설명하기 위한 변수는 $n+1$개이고 13개의 매장 데이터의 x값과 y값 사이의 관계를 잘 설명해낼 수 있는 $\beta$ 값들을 찾아야 할 것이다. 
 
@@ -186,12 +192,12 @@ $\alpha$를 0.1로 설정했을 때 : 33개의 변수가 사용되었고 가장 
 
 실습을 위하여 기본 라이브러리들을 import 하고,
 
-```python
+<pre><code>
 # import numpy as np
 import pandas as pd
 from pandas import Series, DataFrame
 from sklearn.model_selection import train_test_split
-```
+</code></pre>
 
 파일을 불러와준 후 간단히 결측치 처리와 범주형 변수 더미화를 해주었다.
 
@@ -353,9 +359,11 @@ $\alpha$ 값이 대략 0.5일때 가장 스코어가 높았고.. 그 스코어�
 
 #### 참고자료
 
-[회귀분석이란?]: http://math7.tistory.com/118
+회귀분석이란?[회귀분석이란?]: http://math7.tistory.com/118
 [선형 회귀 그리고 라쏘]: http://bskyvision.com/193
 [회귀분석]: http://ordo.tistory.com/tag/%ED%9A%8C%EA%B7%80%EB%B6%84%EC%84%9D
 [arg min and arg max]: http://egloos.zum.com/nnovember/v/3928431
 [ridge와 lasso regression의 쉬운 풀이]: https://brunch.co.kr/@itschloe1/11
 [Regularizaion]: http://blog.naver.com/PostView.nhn?blogId=laonple&amp;amp;logNo=220527647084&amp;amp;parentCategoryNo=&amp;amp;categoryNo=22&amp;amp;viewDate=&amp;amp;isShowPopularPosts=true&amp;amp;from=search
+
+
