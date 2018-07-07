@@ -3,15 +3,12 @@ layout: post
 published: true
 categories:
   - personal
-mathjax: false
-featured: false
-comments: false
-title: An Awesome Headline!
-description: ''
-headline: ''
-modified: ''
-tags: ''
-imagefeature: ''
+mathjax: true
+featured: true
+comments: true
+title: 공부하며 기록한 Lasso Regression
+description: '디자인팀 과제로 '
+tags: JoHyun ML
 ---
 # Lasso Regression
 
