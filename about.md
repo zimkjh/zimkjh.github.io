@@ -27,8 +27,12 @@ chart: true
 {% endfor %}
 
 
+
+
+ 
+ 
+ 
+
 연세대학교 컴퓨터과학과
 
 연세대학교 빅데이터학회 YBIGTA 11기
-
-***This is the space to create.***
