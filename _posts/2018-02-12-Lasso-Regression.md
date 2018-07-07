@@ -354,11 +354,16 @@ $\alpha$ 값이 대략 0.5일때 가장 스코어가 높았고.. 그 스코어�
 
 #### 참고자료
 
-회귀분석이란?[회귀분석이란?]: http://math7.tistory.com/118
+[회귀분석이란?]: http://math7.tistory.com/118
+
 [선형 회귀 그리고 라쏘]: http://bskyvision.com/193
+
 [회귀분석]: http://ordo.tistory.com/tag/%ED%9A%8C%EA%B7%80%EB%B6%84%EC%84%9D
+
 [arg min and arg max]: http://egloos.zum.com/nnovember/v/3928431
+
 [ridge와 lasso regression의 쉬운 풀이]: https://brunch.co.kr/@itschloe1/11
+
 [Regularizaion]: http://blog.naver.com/PostView.nhn?blogId=laonple&amp;amp;logNo=220527647084&amp;amp;parentCategoryNo=&amp;amp;categoryNo=22&amp;amp;viewDate=&amp;amp;isShowPopularPosts=true&amp;amp;from=search
 
 
