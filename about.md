@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /about/index.html
-title: Hossain Mohd Faysal
-tags: [Hossain, Mohd, Faysal, hmfaysal]
-imagefeature: fourseasons.jpg
+title: JoHyun Kim
+tags: [JoHyun]
+imagefeature: ham_photo.png
 chart: true
 ---
 <figure>
